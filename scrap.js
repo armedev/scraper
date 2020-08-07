@@ -16,20 +16,6 @@ request(value, async (error, response, html) => {
         // console.log(episodeLink);
       }
     });
-
-    //fetching links from eplinks array
-    for (let index = 0; index < 1; index++) {
-      const link = eplinks[index];
-      request(link, async (error, response, html) => {
-        if (!error && response.statusCode == 200) {
-          const $ = cheerio.load(html);
-          const dwlink = await $("video.jw-video");
-          console.log(dwlink);
-        } else {
-          console.log(error, response.status);
-        }
-      });
-    }
   } else {
     console.log(error, response.status);
   }
