@@ -1,4 +1,4 @@
-const value = "https://kayifamily.com/tv-show/kurulus-osman/";
+const value = "";
 const request = require("request");
 const cheerio = require("cheerio");
 const eplinks = [];
